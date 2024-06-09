@@ -26,7 +26,7 @@ Authentifizierung: Benutzerverwaltung und Sitzungsverwaltung
 
 Zukünftige Verbesserungen
 
-Verbesserungen 1
+Verbesserungen Phase 1:
 Mehr Metadaten hinzufügen und Hilfsmethoden erstellen, um die Informationen über jedes Segment zu verkürzen.
 Feintuning des Dion-GPT abschließen, um die aktuellen Statistiken für den Erfolg einiger Entscheidungen zu berücksichtigen.
 Zwei weitere feinabgestimmte GPTs erstellen:
@@ -38,12 +38,12 @@ JavaScript hinzufügen, um diese Anfragen zu bearbeiten.
 Asynchrone Anfragen zur Zeitoptimierung erstellen.
 Sobald alles effizient und mit minimalen Fehlern funktioniert, das Frontend basierend auf der Sigma-Vorlage entwickeln.
 
-Verbesserungen 2
+Verbesserungen Phase 2:
 Entwicklung der gesamten Benutzeroberfläche und eines guten Frontends für die gesamte App.
 Eine Funktion hinzufügen, die basierend auf den Eingaben ein Profilbild des Benutzers erstellt.
 Eine Funktion hinzufügen, die ein Bild des aktuellen Spielstandorts erstellt (dalle, fireworks.ai).
 
-Verbesserungen 3
+Verbesserungen Phase 3:
 Eine Telefonfunktion hinzufügen, um mit interessanten Personen zu chatten.
 Die Website bereitstellen.
 Mit dem Marketing beginnen.
