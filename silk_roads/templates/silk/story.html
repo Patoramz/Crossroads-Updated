@@ -1,0 +1,90 @@
+{% extends 'silk/base.html' %}
+{% load static %}
+
+{% block extra_styles %}
+<link rel="stylesheet" type="text/css" href="{% static 'silk_road/css/base_styles.css' %}">
+{% endblock extra_styles %}
+
+{% block content %}
+<div class="header-container story-header clearfix">
+    <h1 class="left">Create Character</h1>
+    {% if response1 and response2 %}
+        <div class="next-button right">
+            <a href="{% url 'silk:game' %}">Next</a>
+        </div>
+    {% endif %}
+</div>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    {% if not response2 %}
+    <button type="submit">Create</button>
+    {% endif %}
+</form>
+
+<!-- Styles for the boxes and their content -->
+<style>
+    .story-header h1 {
+        margin: 0;
+        padding: 0;
+    }
+
+    .next-button a {
+        background-color: #ddd;
+        padding: 5px 15px;
+        border-radius: 5px;
+        text-decoration: none;
+        color: #333;
+        font-family: 'Old Standard';
+    }
+
+    .next-button a:hover {
+        background-color: #bbb;
+    }
+
+    .response-box {
+        border: 1px solid #ccc;
+        padding: 20px;
+        margin: 20px;
+        flex: 1;
+        max-width: 45%;
+    }
+
+    .title {
+        font-weight: bold;
+        font-size: 1.5em;
+        margin-bottom: 20px;
+    }
+
+    .separator-line {
+        width: 2%;
+        border-left: 1px solid #ccc;
+        height: 100%;
+        margin: 20px 1%;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+    }
+</style>
+
+{% if response1 and response2 %}
+<div class="container">
+    <div class="response-box">
+        <div class="title">Backstory</div>
+        {{ response1|safe }}
+    </div>
+
+    <div class="separator-line"></div>
+
+    <div class="response-box">
+        <div class="title">Location</div>
+        {{ response2|safe }}
+    </div>
+</div>
+{% endif %}
+
+{% endblock %}

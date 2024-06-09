@@ -1,0 +1,4 @@
+He finds himself now in a class of the fundamentals of machine learning, he sees Emma enter late.
+Her cheeks are flushed from the rush, and she quickly finds a seat without meeting anyone's eyes.
+The room's focus shifts back to the professor, but Patricio still watches her, curiosity piqued.
+Choice 1: Go up to her after class \n Choice 2: Hope she talks to you

@@ -1,0 +1,34 @@
+{% load static %}
+<html>
+<head>
+    <style>
+        body {
+            background-image: url('{% static "silk_road/images/place_holder.jpg" %}');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
+    {% block extra_styles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'silk_road/css/base_styles.css' %}">
+    {% endblock extra_styles %}
+</head>
+<body>
+    <div class="header-container clearfix">
+        <div class="left">
+            Ramz Co.
+        </div>
+        <div class="right">
+            <a href="{% url 'silk:index' %}">Crossroads</a>
+        </div>
+        <hr>
+    </div>
+<!-- Logout Form -->
+            <form action="{% url 'silk:logout' %}" method="post" style="display: inline;">
+                {% csrf_token %}
+                <button type="submit" class="logout-button">Logout</button>
+            </form>
+    {% block content %}
+    {% endblock content %}
+</body>
+</html>
+

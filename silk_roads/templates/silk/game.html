@@ -1,0 +1,77 @@
+{% extends 'silk/base.html' %}
+{% load static %}
+
+{% block extra_styles %}
+<link rel="stylesheet" type="text/css" href="{% static 'silk_road/css/base_styles.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'silk_road/css/game_styles.css' %}">
+{% endblock extra_styles %}
+
+{% block content %}
+<div class="main-container">
+
+    <div class="left-stats-container">
+        <h2>Player Stats</h2>
+        <ul>
+            <li>Age: </li>
+            <li>Happiness: {{ stats.happiness }}</li>
+            <li>Reputation: {{ stats.reputation }}</li>
+            <li>Rizz: {{ stats.rizz }}</li>
+            <li>Influence: {{ stats.influence }}</li>
+            <li>Self-Esteem: {{ stats.esteem }}</li>
+            <li>Social Skills: {{ stats.skills }}</li>
+        </ul>
+    </div>
+
+    <div class="story-container">
+        <div class="location-header">
+        <b>{{ location_info|safe }}</b>
+    </div>
+    <div class="next-segment">
+        {{ next_segment|safe }}
+    </div>
+
+        <div class="choices-container">
+            {% if choices.0 and choices.1 %}
+            <form method="post" action="{% url 'silk:game' %}">
+                {% csrf_token %}
+                <input type="hidden" name="choice" value="{{ choices.0 }}">
+                <input type="submit" class="choice-btn" value="{{ choices.0 }}">
+            </form>
+
+            <form method="post" action="{% url 'silk:game' %}">
+                {% csrf_token %}
+                <input type="hidden" name="choice" value="{{ choices.1 }}">
+                <input type="submit" class="choice-btn" value="{{ choices.1 }}">
+            </form>
+            {% endif %}
+        </div>
+
+        <div class="choices-container">
+            <form method="post" action="{% url 'silk:game' %}">
+                {% csrf_token %}
+                <input type="text" name="choice" class="custom-choice-input" placeholder="Type your choice here..." required maxlength="100">
+                <input type="submit" class="custom-choice-btn" value="Submit Choice">
+            </form>
+        </div>
+    </div>
+
+        <div class="right-stats-container">
+            <h2>Moral Compass & Social Battery</h2>
+            <div class="moral-compass">Moral Compass: {{ stats.moral_compass }}</div>
+            <div class="social-battery">Social Battery: {{ stats.battery }}%</div>
+        </div>
+
+        <div class="right-stats-container">
+            <h2>Repercussions</h2>
+            <div class="repercussions"> {{ repercussions|safe }}</div>
+        </div>
+
+       <div class="right-stats-container">
+           <h2>Plot and People of Interest</h2>
+           <div class="plot"> {{ plot|safe }}</div>
+
+       </div>
+
+</div>
+
+{% endblock content %}

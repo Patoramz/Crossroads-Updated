@@ -1,0 +1,126 @@
+/* Styles for the game pages */
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    width: 100%;
+}
+
+.left-stats-container, .right-stats-container {
+    width: 15%;
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.left-stats-container h2, .right-stats-container h2 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.left-stats-container ul, .right-stats-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.left-stats-container ul li, .right-stats-container ul li {
+    margin: 5px 0;
+    font-size: 1.25rem;
+}
+
+.story-container {
+    width: 70%;
+    margin: 20px auto;
+    padding: 15px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.location-header {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.choices-container {
+    display: flex;
+    justify-content: center;
+    align-items: start; /* Aligns children (buttons) to the start, so if one button grows taller than the other, they align at the top */
+    width: 70%;
+    margin: 20px auto;
+    gap: 1rem;
+}
+
+.choice-btn {
+    flex: 1; /* Allows the buttons to grow and take available space, but they will still remain equal in width */
+    font-size: 1.5rem; /* Makes the choice buttons four times as big */
+    padding: 5px 7.5px; /* Increases the padding inside the button */
+    box-sizing: border-box;
+    text-align: center;
+    white-space: normal; /* Allows the text to wrap */
+    border: 1px solid #ccc;
+    background-color: #f8f8f8;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.choice-btn:hover {
+    background-color: #e8e8e8;
+
+.custom-choice-input {
+    width: 100%; /* Makes the input field take the full width of its container */
+    padding: 7.5px 10px; /* Adds some padding inside the input field */
+    box-sizing: border-box; /* Ensures padding doesn't make the input larger than specified width */
+    border: 1px solid #ccc; /* Adds a border around the input */
+    margin-bottom: 13px; /* Adds some space between the input and the button */
+    font-size: 2rem; /* Increases the font size */
+}
+
+.custom-choice-btn {
+    font-size: 2rem; /* Makes the submit button twice as big */
+    padding: 3.366px 5px; /* Increases the padding inside the button */
+    width: 100%; /* Makes the button take the full width of its container */
+    border: 1px solid #ccc; /* Adds a border around the button */
+    background-color: #f8f8f8; /* Sets a background color */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    transition: background-color 0.3s ease; /* Adds a transition effect on hover */
+}
+
+.custom-choice-btn:hover {
+    background-color: #e8e8e8; /* Changes background color on hover */
+}
+
+.moral-compass, .social-battery {
+    margin: 5px 0;
+    font-size: 1.25rem;
+    text-align: center;
+    /* Additional styling for these elements can go here */
+}
+
+.repercussions-container {
+    display: flex;
+    width: 20%;
+    margin: 15px auto;
+}
+
+}
+
+.repercussions {
+    margin-top: 15px;
+    margin: 5px 0;
+    font-size: 1.25rem;
+    text-align: center;
+    /* Additional styling for these elements can go here */
+}
+.plot {
+    margin-top: 15px;
+    margin: 5px 0;
+    font-size: 1.25rem;
+    text-align: center;
+    /* Additional styling for these elements can go here */
+}
+
+/* You can also add additional styles or modify these as needed */
