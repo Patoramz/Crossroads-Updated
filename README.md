@@ -37,10 +37,12 @@ Datenstreaming von GPT implementieren, anstatt alle Daten auf einmal zu senden.
 JavaScript hinzufügen, um diese Anfragen zu bearbeiten.
 Asynchrone Anfragen zur Zeitoptimierung erstellen.
 Sobald alles effizient und mit minimalen Fehlern funktioniert, das Frontend basierend auf der Sigma-Vorlage entwickeln.
+
 Verbesserungen 2
 Entwicklung der gesamten Benutzeroberfläche und eines guten Frontends für die gesamte App.
 Eine Funktion hinzufügen, die basierend auf den Eingaben ein Profilbild des Benutzers erstellt.
 Eine Funktion hinzufügen, die ein Bild des aktuellen Spielstandorts erstellt (dalle, fireworks.ai).
+
 Verbesserungen 3
 Eine Telefonfunktion hinzufügen, um mit interessanten Personen zu chatten.
 Die Website bereitstellen.
